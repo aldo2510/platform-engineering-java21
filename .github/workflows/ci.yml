@@ -1,0 +1,13 @@
+name: Application CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  platform-ci:
+    uses: aldo2510/platform-engineering-templates/.github/workflows/java-ci.yml@v1
+    with:
+      java-version: "21"
+      maven-command: "mvn"
